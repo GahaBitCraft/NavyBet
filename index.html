@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navybet</title>
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <link rel="stylesheet" href="assets/css/utils.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="navigation">
+      <nav>
+        <div class="logo">
+          <!-- <img src="logo.svg" alt="Logo Image" /> -->
+          <a href="index.html"><h4>NavyBet</h4></a>
+        </div>
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="pages/live.html">Live</a></li>
+          <li><a href="pages/sports.html">Sports</a></li>
+          <li><a href="pages/live-casino.html">Live Casino</a></li>
+          <li><a href="pages/slots.html">Slots</a></li>
+          <li><a href="assets/fortune/index.html">Fortune Wheel</a></li>
+          <li><a href="pages/e-sports.html">E-Sports</a></li>
+          <!-- <li><a href="#" id="dropBtn" onmouseover="dropSubMenu()" class="dropbtn">Tournaments</a></li> -->
+
+          <li>
+            <a onmouseover="dropSubMenu()" class="dropbtn">Tournaments</a>
+            <div id="myDropdown" class="dropdown-content">
+              <ul>
+                <li>
+                  <a href="pages/sport-tournaments.html">Sport Tournaments</a>
+                </li>
+                <li>
+                  <a href="pages/casino-tournaments.html">Casino Tournaments</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <button class="login-button" onclick="openPopup()">Log In</button>
+          </li>
+          <li>
+
+              <button class="join-button" onclick="openPopup()">Sign Up</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+      <section class="slider-section">
+        <div class="slider">
+          <div class="slide_viewer">
+            <div class="slide_group">
+              <div class="slide">
+                <img src="assets/imgs/slider_thumbs/s.webp" alt="" srcset="" />
+              </div>
+              <div class="slide">
+                <img src="assets/imgs/slider_thumbs/s1.webp" alt="" srcset="" />
+              </div>
+              <div class="slide">
+                <img src="assets/imgs/slider_thumbs/s4.webp" alt="" srcset="" />
+              </div>
+              <div class="slide">
+                <img src="assets/imgs/slider_thumbs/s3.webp" alt="" srcset="" />
+              </div>
+              <div class="slide">
+                <img src="assets/imgs/slider_thumbs/s.webp" alt="" srcset="" />
+              </div>
+              <div class="slide">
+                <img src="assets/imgs/slider_thumbs/s1.webp" alt="" srcset="" />
+              </div>
+              <div class="slide">
+                <img src="assets/imgs/slider_thumbs/s4.webp" alt="" srcset="" />
+              </div>
+              <div class="slide">
+                <img src="assets/imgs/slider_thumbs/s3.webp" alt="" srcset="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End // .slider -->
+
+        <div class="slide_buttons"></div>
+
+        <div class="directional_nav">
+          <div class="previous_btn" title="Previous">
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              width="65px"
+              height="65px"
+              viewBox="-11 -11.5 65 66"
+            >
+              <g>
+                <g>
+                  <path
+                    fill="#474544"
+                    d="M-10.5,22.118C-10.5,4.132,4.133-10.5,22.118-10.5S54.736,4.132,54.736,22.118
+              c0,17.985-14.633,32.618-32.618,32.618S-10.5,40.103-10.5,22.118z M-8.288,22.118c0,16.766,13.639,30.406,30.406,30.406 c16.765,0,30.405-13.641,30.405-30.406c0-16.766-13.641-30.406-30.405-30.406C5.35-8.288-8.288,5.352-8.288,22.118z"
+                  />
+                  <path
+                    fill="#474544"
+                    d="M25.43,33.243L14.628,22.429c-0.433-0.432-0.433-1.132,0-1.564L25.43,10.051c0.432-0.432,1.132-0.432,1.563,0	c0.431,0.431,0.431,1.132,0,1.564L16.972,21.647l10.021,10.035c0.432,0.433,0.432,1.134,0,1.564	c-0.215,0.218-0.498,0.323-0.78,0.323C25.929,33.569,25.646,33.464,25.43,33.243z"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="next_btn" title="Next">
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              width="65px"
+              height="65px"
+              viewBox="-11 -11.5 65 66"
+            >
+              <g>
+                <g>
+                  <path
+                    fill="#474544"
+                    d="M22.118,54.736C4.132,54.736-10.5,40.103-10.5,22.118C-10.5,4.132,4.132-10.5,22.118-10.5	c17.985,0,32.618,14.632,32.618,32.618C54.736,40.103,40.103,54.736,22.118,54.736z M22.118-8.288	c-16.765,0-30.406,13.64-30.406,30.406c0,16.766,13.641,30.406,30.406,30.406c16.768,0,30.406-13.641,30.406-30.406 C52.524,5.352,38.885-8.288,22.118-8.288z"
+                  />
+                  <path
+                    fill="#474544"
+                    d="M18.022,33.569c 0.282,0-0.566-0.105-0.781-0.323c-0.432-0.431-0.432-1.132,0-1.564l10.022-10.035 			L17.241,11.615c 0.431-0.432-0.431-1.133,0-1.564c0.432-0.432,1.132-0.432,1.564,0l10.803,10.814c0.433,0.432,0.433,1.132,0,1.564 L18.805,33.243C18.59,33.464,18.306,33.569,18.022,33.569z"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <!-- End // .directional_nav -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      </section>
+      <div class="game-cats">
+        <hr style="border: 1px solid gold;">
+        <a href="" alt="Mythrill" target="_blank">
+          <div class="card">
+            <div class="wrapper">
+              <img src="assets/imgs/Sports.webp" class="cover-image" />
+            </div>
+            <img src="assets/imgs/Sports.webp" class="title" />
+            <img src="assets/imgs/Sports.webp" class="character" />
+          </div>
+        </a>
+
+        <a href="" alt="Mythrill" target="_blank">
+          <div class="card">
+            <div class="wrapper">
+              <img src="assets/imgs/Live_Casino.webp" class="cover-image" />
+            </div>
+            <img src="assets/imgs/Live_Casino.webp" class="title" />
+            <img src="assets/imgs/Live_Casino.webp" class="character" />
+          </div>
+        </a>
+
+        <a href="" alt="Mythrill" target="_blank">
+          <div class="card">
+            <div class="wrapper">
+              <img src="assets/imgs/Games.webp" class="cover-image" />
+            </div>
+            <img src="assets/imgs/Games.webp" class="title" />
+            <img src="assets/imgs/Games.webp" class="character" />
+          </div>
+        </a>
+
+        <a href="" alt="Mythrill" target="_blank">
+          <div class="card">
+            <div class="wrapper">
+              <img src="assets/imgs/Poker.webp" class="cover-image" />
+            </div>
+            <img src="assets/imgs/Poker.webp" class="title" />
+            <img src="assets/imgs/Poker.webp" class="character" />
+          </div>
+        </a>
+
+        <a href="" alt="Mythrill" target="_blank">
+          <div class="card">
+            <div class="wrapper">
+              <img src="assets/imgs/Slots.webp" class="cover-image" />
+            </div>
+            <img src="assets/imgs/Slots.webp" class="title" />
+            <img src="assets/imgs/Slots.webp" class="character" />
+          </div>
+        </a>
+
+        <a href="" alt="Mythrill" target="_blank">
+          <div class="card">
+            <div class="wrapper">
+              <img src="assets/imgs/E-sports.webp" class="cover-image" />
+            </div>
+            <img src="assets/imgs/E-sports.webp" class="title" />
+            <img src="assets/imgs/E-sports.webp" class="character" />
+          </div>
+        </a>
+        <hr style="border: 1px solid gold;">
+      </div>
+
+      <section style="height: 20em; background-color: #131418">
+        <div class="jsx-331303593 eats-title-component">Popular Events</div>
+
+        <div class="vs-card-container">
+    
+          <div class="custom-carousel">
+              <div class="vs-card">
+                  <div class="header">
+                    <div class="league-name">Premier League</div>
+                    <div class="set-info">
+                      <div class="set-name">Match Set A</div>
+                      <div class="date">March 25, 2024</div>
+                      <div class="star-icon"><i class="fas fa-star"></i></div>
+                    </div>
+                  </div>
+                  <div class="teams">
+                    <div class="team">
+                      <img src="assets/flags/1x1/ae.svg" alt="Team 1 Logo"><br>
+                      <div class="team-name">Team 1</div>
+                      <div class="points">5</div>
+                    </div>
+                    <div class="versus">VS</div>
+                    <div class="team">
+                      <img src="assets/flags/1x1/af.svg" alt="Team 2 Logo"><br>
+                      <div class="team-name">Team 2</div>
+                      <div class="points">3</div>
+                    </div>
+                  </div>
+                  <div class="footer">
+                    <button class="odd" onclick="highlight(this)">2.1</button>
+                    <button class="odd" onclick="highlight(this)">3.0</button>
+                    <button class="odd" onclick="highlight(this)">2.5</button>
+                  </div>
+                </div>
+      
+                <div class="vs-card">
+                  <div class="header">
+                    <div class="league-name">Premier League</div>
+                    <div class="set-info">
+                      <div class="set-name">Match Set A</div>
+                      <div class="date">March 25, 2024</div>
+                      <div class="star-icon"><i class="fas fa-star"></i></div>
+                    </div>
+                  </div>
+                  <div class="teams">
+                    <div class="team">
+                      <img src="assets/flags/1x1/us.svg" alt="Team 1 Logo"><br>
+                      <div class="team-name">Team 1</div>
+                      <div class="points">5</div>
+                    </div>
+                    <div class="versus">VS</div>
+                    <div class="team">
+                      <img src="assets/flags/1x1/gb-eng.svg" alt="Team 2 Logo"><br>
+                      <div class="team-name">Team 2</div>
+                      <div class="points">3</div>
+                    </div>
+                  </div>
+                  <div class="footer">
+                    <button class="odd" onclick="highlight(this)">2.1</button>
+                    <button class="odd" onclick="highlight(this)">3.0</button>
+                    <button class="odd" onclick="highlight(this)">2.5</button>
+                  </div>
+                </div>
+      
+                <div class="vs-card">
+                  <div class="header">
+                    <div class="league-name">Premier League</div>
+                    <div class="set-info">
+                      <div class="set-name">Match Set A</div>
+                      <div class="date">March 25, 2024</div>
+                      <div class="star-icon"><i class="fas fa-star"></i></div>
+                    </div>
+                  </div>
+                  <div class="teams">
+                    <div class="team">
+                      <img src="assets/flags/1x1/ae.svg" alt="Team 1 Logo"><br>
+                      <div class="team-name">Team 1</div>
+                      <div class="points">5</div>
+                    </div>
+                    <div class="versus">VS</div>
+                    <div class="team">
+                      <img src="assets/flags/1x1/af.svg" alt="Team 2 Logo"><br>
+                      <div class="team-name">Team 2</div>
+                      <div class="points">3</div>
+                    </div>
+                  </div>
+                  <div class="footer">
+                    <button class="odd" onclick="highlight(this)">2.1</button>
+                    <button class="odd" onclick="highlight(this)">3.0</button>
+                    <button class="odd" onclick="highlight(this)">2.5</button>
+                  </div>
+                </div>
+      
+                <div class="vs-card">
+                  <div class="header">
+                    <div class="league-name">Premier League</div>
+                    <div class="set-info">
+                      <div class="set-name">Match Set A</div>
+                      <div class="date">March 25, 2024</div>
+                      <div class="star-icon"><i class="fas fa-star"></i></div>
+                    </div>
+                  </div>
+                  <div class="teams">
+                    <div class="team">
+                      <img src="assets/flags/1x1/us.svg" alt="Team 1 Logo"><br>
+                      <div class="team-name">Team 1</div>
+                      <div class="points">5</div>
+                    </div>
+                    <div class="versus">VS</div>
+                    <div class="team">
+                      <img src="assets/flags/1x1/gb-eng.svg" alt="Team 2 Logo"><br>
+                      <div class="team-name">Team 2</div>
+                      <div class="points">3</div>
+                    </div>
+                  </div>
+                  <div class="footer">
+                    <button class="odd" onclick="highlight(this)">2.1</button>
+                    <button class="odd" onclick="highlight(this)">3.0</button>
+                    <button class="odd" onclick="highlight(this)">2.5</button>
+                  </div>
+                </div>
+              <!-- Add more vs-card elements as needed -->
+          </div>
+          <button class="custom-prev" onclick="prevCustomSlide()">&#10094;</button>
+          <button class="custom-next" onclick="nextCustomSlide()">&#10095;</button>
+      </div>
+      </section>
+
+      <section style="background-color: #131418">
+        <div class="team-widget">
+          <div
+            id="team-widget-revho"
+            class="team-widget-revho-main main-team-layout"
+          >
+            <div class="team-revho team-revho-container">
+              <div class="jsx-331303593 eats-title-component">Live Casino</div>
+              <div class="">
+                <div class="revho-func-component">
+                  <div
+                    class="revho-func-component-default revho-func-component-grid"
+                  >
+                    <div class="revho-func-grid-item">
+                      <div
+                        class="revho-func-data-default-container revho-func-card-gallery-component"
+                      >
+                        <div
+                          class="revho-func-data-default-container revho-func-card-gallery-infoContainer"
+                        >
+                          <div
+                            class="revho-func-data-default revho-func-card-info-component"
+                          >
+                            <div
+                              class="revho-func-data-default revho-func-card-info-name"
+                            >
+                              Dragon Tiger Creedzroom
+                            </div>
+                            <div class="revho-func-data-default">Casino</div>
+                          </div>
+                          <div
+                            class="jsx-908247444 revho-func-card-socials-component"
+                          >
+                            <a
+                              href=""
+                              class="revho-func-card-socials-item"
+                              target="_blank"
+                              rel="noopener noreferrer nofollow"
+                            >
+                              <div
+                                class="revho-func-card-socials-iconContainer"
+                              >
+                                <i class="fas fa-play"></i>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="revho-func-data-default-container revho-func-card-gallery-photoContainer"
+                        >
+                          <div
+                            class="jsx-3963818278 revho-func-card-photo-photoContainer"
+                          >
+                            <img
+                              src="assets/imgs/thumbs/Thumb.webp"
+                              class="jsx-3963818278 revho-func-card-photo-photo revho-func-card-photo-photoShow"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="revho-func-grid-item">
+                      <div
+                        class="revho-func-data-default-container revho-func-card-gallery-component"
+                      >
+                        <div
+                          class="revho-func-data-default-container revho-func-card-gallery-infoContainer"
+                        >
+                          <div
+                            class="revho-func-data-default revho-func-card-info-component"
+                          >
+                            <div
+                              class="revho-func-data-default revho-func-card-info-name"
+                            >
+                              Roulette Creedzroom
+                            </div>
+                            <div class="revho-func-data-default">Casino</div>
+                          </div>
+                          <div
+                            class="jsx-908247444 revho-func-card-socials-component"
+                          >
+                            <a
+                              href=""
+                              class="revho-func-card-socials-item"
+                              target="_blank"
+                              rel="noopener noreferrer nofollow"
+                            >
+                              <div
+                                class="revho-func-card-socials-iconContainer"
+                              >
+                              <i class="fas fa-play"></i>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="revho-func-data-default-container revho-func-card-gallery-photoContainer"
+                        >
+                          <div
+                            class="jsx-3963818278 revho-func-card-photo-photoContainer"
+                          >
+                            <img
+                              src="assets/imgs/thumbs/Thumb1.webp"
+                              class="jsx-3963818278 revho-func-card-photo-photo revho-func-card-photo-photoShow"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="revho-func-grid-item">
+                      <div
+                        class="revho-func-data-default-container revho-func-card-gallery-component"
+                      >
+                        <div
+                          class="revho-func-data-default-container revho-func-card-gallery-infoContainer"
+                        >
+                          <div
+                            class="revho-func-data-default revho-func-card-info-component"
+                          >
+                            <div
+                              class="revho-func-data-default revho-func-card-info-name"
+                            >
+                              Sic Bo Creedzroom
+                            </div>
+                            <div class="revho-func-data-default">Casino</div>
+                          </div>
+                          <div
+                            class="jsx-908247444 revho-func-card-socials-component"
+                          >
+                            <a
+                              href=""
+                              class="revho-func-card-socials-item"
+                              target="_blank"
+                              rel="noopener noreferrer nofollow"
+                            >
+                              <div
+                                class="revho-func-card-socials-iconContainer"
+                              >
+                              <i class="fas fa-play"></i>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="revho-func-data-default-container revho-func-card-gallery-photoContainer"
+                        >
+                          <div
+                            class="jsx-3963818278 revho-func-card-photo-photoContainer"
+                          >
+                            <img
+                              src="assets/imgs/thumbs/Thumb2.webp"
+                              class="jsx-3963818278 revho-func-card-photo-photo revho-func-card-photo-photoShow"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="revho-func-grid-item">
+                      <div
+                        class="revho-func-data-default-container revho-func-card-gallery-component"
+                      >
+                        <div
+                          class="revho-func-data-default-container revho-func-card-gallery-infoContainer"
+                        >
+                          <div
+                            class="revho-func-data-default revho-func-card-info-component"
+                          >
+                            <div
+                              class="revho-func-data-default revho-func-card-info-name"
+                            >
+                              Baccarat Playtech Live
+                            </div>
+                            <div class="revho-func-data-default">Casino</div>
+                          </div>
+                          <div
+                            class="jsx-908247444 revho-func-card-socials-component"
+                          >
+                            <a
+                              href=""
+                              class="revho-func-card-socials-item"
+                              target="_blank"
+                              rel="noopener noreferrer nofollow"
+                            >
+                              <div
+                                class="revho-func-card-socials-iconContainer"
+                              >
+                              <i class="fas fa-play"></i>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="revho-func-data-default-container revho-func-card-gallery-photoContainer"
+                        >
+                          <div
+                            class="jsx-3963818278 revho-func-card-photo-photoContainer"
+                          >
+                            <img
+                              src="assets/imgs/thumbs/Thumb3.webp"
+                              class="jsx-3963818278 revho-func-card-photo-photo revho-func-card-photo-photoShow"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section style="background-color: #131418">
+        <div class="team-widget">
+          <div
+            id="team-widget-revho"
+            class="team-widget-revho-main main-team-layout"
+          >
+            <div class="team-revho team-revho-container">
+              <div class="jsx-331303593 eats-title-component">Top Slots</div>
+              <div class="">
+                <div class="revho-func-component">
+                  <div
+                    class="revho-func-component-default revho-func-component-grid"
+                  >
+                    <div class="revho-func-grid-item">
+                      <div
+                        class="revho-func-data-default-container revho-func-card-gallery-component"
+                      >
+                        <div
+                          class="revho-func-data-default-container revho-func-card-gallery-infoContainer"
+                        >
+                          <div
+                            class="revho-func-data-default revho-func-card-info-component"
+                          >
+                            <div
+                              class="revho-func-data-default revho-func-card-info-name"
+                            >
+                              Hot Gems
+                            </div>
+                            <div class="revho-func-data-default">Slot</div>
+                          </div>
+                          <div
+                            class="jsx-908247444 revho-func-card-socials-component"
+                          >
+                            <a
+                              href=""
+                              class="revho-func-card-socials-item"
+                              target="_blank"
+                              rel="noopener noreferrer nofollow"
+                            >
+                              <div
+                                class="revho-func-card-socials-iconContainer"
+                              >
+                              <i class="fas fa-play"></i>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="revho-func-data-default-container revho-func-card-gallery-photoContainer"
+                        >
+                          <div
+                            class="jsx-3963818278 revho-func-card-photo-photoContainer"
+                          >
+                            <img
+                              src="assets/imgs/slot_thumbs/st.webp"
+                              class="jsx-3963818278 revho-func-card-photo-photo revho-func-card-photo-photoShow"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="revho-func-grid-item">
+                      <div
+                        class="revho-func-data-default-container revho-func-card-gallery-component"
+                      >
+                        <div
+                          class="revho-func-data-default-container revho-func-card-gallery-infoContainer"
+                        >
+                          <div
+                            class="revho-func-data-default revho-func-card-info-component"
+                          >
+                            <div
+                              class="revho-func-data-default revho-func-card-info-name"
+                            >
+                              Hot Joker Fruits : Scatter Pays
+                            </div>
+                            <div class="revho-func-data-default">Slot</div>
+                          </div>
+                          <div
+                            class="jsx-908247444 revho-func-card-socials-component"
+                          >
+                            <a
+                              href=""
+                              class="revho-func-card-socials-item"
+                              target="_blank"
+                              rel="noopener noreferrer nofollow"
+                            >
+                              <div
+                                class="revho-func-card-socials-iconContainer"
+                              >
+                              <i class="fas fa-play"></i>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="revho-func-data-default-container revho-func-card-gallery-photoContainer"
+                        >
+                          <div
+                            class="jsx-3963818278 revho-func-card-photo-photoContainer"
+                          >
+                            <img
+                              src="assets/imgs/slot_thumbs/st1.webp"
+                              class="jsx-3963818278 revho-func-card-photo-photo revho-func-card-photo-photoShow"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="revho-func-grid-item">
+                      <div
+                        class="revho-func-data-default-container revho-func-card-gallery-component"
+                      >
+                        <div
+                          class="revho-func-data-default-container revho-func-card-gallery-infoContainer"
+                        >
+                          <div
+                            class="revho-func-data-default revho-func-card-info-component"
+                          >
+                            <div
+                              class="revho-func-data-default revho-func-card-info-name"
+                            >
+                              Deadly Diamond
+                            </div>
+                            <div class="revho-func-data-default">Slot</div>
+                          </div>
+                          <div
+                            class="jsx-908247444 revho-func-card-socials-component"
+                          >
+                            <a
+                              href=""
+                              class="revho-func-card-socials-item"
+                              target="_blank"
+                              rel="noopener noreferrer nofollow"
+                            >
+                              <div
+                                class="revho-func-card-socials-iconContainer"
+                              >
+                              <i class="fas fa-play"></i>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="revho-func-data-default-container revho-func-card-gallery-photoContainer"
+                        >
+                          <div
+                            class="jsx-3963818278 revho-func-card-photo-photoContainer"
+                          >
+                            <img
+                              src="assets/imgs/slot_thumbs/st2.webp"
+                              class="jsx-3963818278 revho-func-card-photo-photo revho-func-card-photo-photoShow"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="revho-func-grid-item">
+                      <div
+                        class="revho-func-data-default-container revho-func-card-gallery-component"
+                      >
+                        <div
+                          class="revho-func-data-default-container revho-func-card-gallery-infoContainer"
+                        >
+                          <div
+                            class="revho-func-data-default revho-func-card-info-component"
+                          >
+                            <div
+                              class="revho-func-data-default revho-func-card-info-name"
+                            >
+                              Fuzzy Wuzzy
+                            </div>
+                            <div class="revho-func-data-default">Slot</div>
+                          </div>
+                          <div
+                            class="jsx-908247444 revho-func-card-socials-component"
+                          >
+                            <a
+                              href=""
+                              class="revho-func-card-socials-item"
+                              target="_blank"
+                              rel="noopener noreferrer nofollow"
+                            >
+                              <div
+                                class="revho-func-card-socials-iconContainer"
+                              >
+                              <i class="fas fa-play"></i>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="revho-func-data-default-container revho-func-card-gallery-photoContainer"
+                        >
+                          <div
+                            class="jsx-3963818278 revho-func-card-photo-photoContainer"
+                          >
+                            <img
+                              src="assets/imgs/slot_thumbs/st3.webp"
+                              class="jsx-3963818278 revho-func-card-photo-photo revho-func-card-photo-photoShow"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Login & Registration Popup -->
+      <div class="popup-container" id="popup-container">
+        <div class="popup" id="popup">
+          <div class="popup-content">
+            <div class="popup-header">
+              <h2>Login</h2>
+              <span class="close" onclick="closePopup()">&times;</span>
+            </div>
+            <form id="login-form" class="form">
+              <div class="form-group">
+                <label for="username"><i class="fas fa-user"></i></label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="Username"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password"><i class="fas fa-lock"></i></label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Password"
+                  required
+                />
+                <span
+                  class="toggle-password"
+                  onclick="togglePasswordVisibility()"
+                  ><i class="fas fa-eye"></i
+                ></span>
+              </div>
+              <button type="submit" class="btn">Login</button>
+              <div class="sub-links">
+                <p>
+                  <a href="#" onclick="forgotPassword()">Forgot Password?</a>
+                </p>
+              </div>
+            </form>
+            <form id="register-form" class="form" style="display: none">
+              <div class="form-group">
+                <label for="new-username"><i class="fas fa-user"></i></label>
+                <input
+                  type="text"
+                  id="new-username"
+                  name="new-username"
+                  placeholder="Username"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="new-email"><i class="fas fa-envelope"></i></label>
+                <input
+                  type="email"
+                  id="new-email"
+                  name="new-email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="new-password"><i class="fas fa-lock"></i></label>
+                <input
+                  type="password"
+                  id="new-password"
+                  name="new-password"
+                  placeholder="Password"
+                  required
+                />
+                <span
+                  class="toggle-password"
+                  onclick="toggleNewPasswordVisibility()"
+                  ><i class="fas fa-eye"></i
+                ></span>
+              </div>
+              <button type="submit" class="btn">Register</button>
+            </form>
+            <div id="reset-form" class="reset-password" style="display: none">
+              <p style="text-align: center; margin-bottom: .5em;">
+                Enter your email to reset your password:
+              </p>
+              <form class="form">
+                <div class="form-group">
+                  <label for="email"><i class="fas fa-envelope"></i></label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn">Reset Password</button>
+              </form>
+              <div class="sub-links">
+                <p>
+                  Don't have an account?
+                  <a href="#" onclick="toggleRegForm()">Register</a>
+                </p>
+                <p>
+                  Back to login? <a href="#" onclick="toggleLogForm()">Login</a>
+                </p>
+              </div>
+            </div>
+            <div class="popup-footer">
+              <p>
+                Don't have an account?
+                <a href="#" onclick="toggleForm()">Register</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">
+              <i><b>Navybet - Elevate Your Betting Experience</b> </i> <br />
+
+              At Navybet, we redefine the online betting experience, offering a
+              comprehensive platform that seamlessly integrates sports and
+              casino betting. Whether you're a sports enthusiast or a casino
+              aficionado, we've got you covered with a diverse range of options
+              to suit every preference.
+            </p>
+          </div>
+
+          <div class="foot-grid">
+            <div class="col-xs-6 col-md-3">
+              <h6>Policies</h6>
+              <ul class="footer-links">
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">AML Policy</a></li>
+              </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Terms and Conditions</a></li>
+                <li><a href="">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">
+              Copyright &copy; 2024 All Rights Reserved by Navybet.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li>
+                <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li>
+                <a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a>
+              </li>
+              <li>
+                <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="assets/js/slider.js"></script>
